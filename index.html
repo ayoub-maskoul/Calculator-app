@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calc-app">
+    <header>
+      <div class="title">calc</div>
+      <div class="colors">THEME <span class="theme" id="theme"><span class="color theme-1"></span></span></div>
+    </header>
+    <div>
+      <input type="text" id="txt" readonly>
+    </div>
+    <div class="btns">
+      <div>
+        <button onclick="onClickNum(7)">7</button>
+        <button onclick="onClickNum(8)">8</button>
+        <button onclick="onClickNum(9)">9</button>
+        <button class="del" onclick="delet()">DEL</button>
+      </div>
+      <div>
+        <button onclick="onClickNum(4)">4</button>
+        <button onclick="onClickNum(5)">5</button>
+        <button onclick="onClickNum(6)">6</button>
+        <button onclick="onClickNum('+')">+</button>
+      </div>
+      <div>
+        <button onclick="onClickNum(1)">1</button>
+        <button onclick="onClickNum(2)">2</button>
+        <button onclick="onClickNum(3)">3</button>
+        <button onclick="onClickNum('-')">-</button>
+      </div>
+      <div>
+        <button onclick="onClickNum('.')">.</button>
+        <button onclick="onClickNum(0)">0</button>
+        <button onclick="onClickNum('/')">/</button>
+        <button onclick="onClickNum('*')">x</button>
+      </div>
+      <div>
+        <button class="rest" onclick="reset()">RESET</button>
+        <button class="igal" onclick="resulta()">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

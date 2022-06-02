@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+:root{
+    /*Theme 1*/
+    --main-background : hsl(222, 26%, 31%);
+    --screen-background : hsl(224, 36%, 15%);
+    --keypad-background : hsl(223, 31%, 20%);
+    --color-keys : hsl(223, 31%, 20%);
+    --screen-color:white;
+    --igal-background: hsl(6, 63%, 50%);
+    --igal-box-shadow: hsl(6, 70%, 34%);
+    --igal-color: white;
+    --del-rest-background: hsl(225, 21%, 49%);
+    --del-rest-box-shadow: hsl(224, 28%, 35%);
+    --del-rest-color:white;
+    --background-keys:white;
+    --box-shadow-keys:hsl(28, 16%, 65%);
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    z-index: -100;
+    background-color: var(--main-background);
+}
+.calc-app{
+    margin-top: 40px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 10px auto;
+}
+header .title,header .colors{
+    color: var(--screen-color);
+    font-size: 1.2rem;
+}
+header .colors{
+    font-size: 0.7rem;
+}
+header .colors .theme{
+    display: inline-block;
+    width: 40px;
+    margin-top: 5px;
+    height: 1.1rem;
+    border-radius: 10px;
+    background-color: var(--keypad-background);
+    position: relative;
+}
+.theme:hover{
+    cursor: pointer;
+}
+header .colors .theme .color{
+    display: inline-block;
+    width: 0.7rem;
+    position: absolute;
+    height: 0.7rem;
+    top:20%;
+    border-radius: 50%;
+    background-color: var(--igal-background);
+    transition: 0.2s;
+}
+header .colors .theme .theme-1{
+    left: 11%;
+}
+header .colors .theme .theme-2{
+    left: 35%;
+}
+header .colors .theme .theme-3{
+    left: 65%;
+}
+input{
+    background-color: var(--screen-background);
+    border: none;
+    width: 400px;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: var(--screen-color);
+    font-size: 30px;
+    text-align: right;
+}
+input:focus,input:hover{
+    outline: none;
+}
+.btns{
+    background-color: var(--keypad-background);
+    margin: 0 auto;
+    width: 400px;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+.btns button:hover{
+    opacity: 0.8;
+}
+.btns button{
+    font-size: 20px;
+    font-weight: 700;
+    width: 20%;
+    height: 40px;
+    margin: 4px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: var(--color-keys);
+    background-color: var(--background-keys);
+    box-shadow: 0 3px var(--box-shadow-keys);
+}
+.btns .del,.btns .rest{
+    color: var(--del-rest-color);
+    background-color: var(--del-rest-background);
+    box-shadow: 0 3px var(--del-rest-box-shadow);
+}
+.btns .rest,.btns .igal{
+    width: 43%;
+}
+.btns .igal{
+    color: var(--igal-color);
+    background-color: var(--igal-background);
+    box-shadow: 0 3px var(--igal-box-shadow);
+}
+
+@media (max-width:420px) {
+    .btns,header,input{
+        width: 95%;
+    }
+}
